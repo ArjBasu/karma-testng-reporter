@@ -1,0 +1,30 @@
+{
+  "name": "karma-testng-reporter",
+  "version": "0.0.1",
+  "description": "TestNG reporter for Karma Jasmine tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "karma",
+    "karma-plugin",
+    "testng"
+  ],
+  "author": "Arjun Basu <arjunkbasu@gmail.com>",
+  "dependencies": {
+    "xmlbuilder": "0.4.2",
+	"MD5": "^1.2.1"
+	
+  },
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-npm": "~0.0.2",
+    "grunt-bump": "~0.0.7",
+    "grunt-auto-release": "~0.0.2"
+  },
+  "license": "MIT"
+}
