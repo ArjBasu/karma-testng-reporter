@@ -11,6 +11,10 @@
     "karma-plugin",
     "testng"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ArjBasu/karma-testng-reporter.git"
+  },
   "author": "Arjun Basu <arjunkbasu@gmail.com>",
   "dependencies": {
     "xmlbuilder": "0.4.2",
