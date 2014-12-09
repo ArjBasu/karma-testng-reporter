@@ -34,7 +34,9 @@ module.exports = function(config) {
   });
 };
 ```
-
+If you want to tag your test cases you can simply put the tag names separated with '|' in the describe section .
+e.g. describe('Logger Module|UT|CT',function(){}); 
+This will tag the specs present inside the describe with two tags UT and CT. As many number of tags can be added.
 You can pass list of reporters as a CLI argument too:
 ```bash
 karma start --reporters testng,dots

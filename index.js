@@ -8,7 +8,7 @@ var md5 = require('MD5');
 
 var TestNgReporter = function(baseReporterDecorator, config, logger, helper, formatError) {
   var log = logger.create('reporter.testng');
-  var reporterConfig = config.testngReport || {};
+  var reporterConfig = config.testngReporter || {};
   var pkgName = reporterConfig.suite || '';
   var outputFile = helper.normalizeWinPath(path.resolve(config.basePath, reporterConfig.outputFile
       || 'testng-results.xml'));
@@ -50,7 +50,6 @@ var TestNgReporter = function(baseReporterDecorator, config, logger, helper, for
     xml = builder.create('testng-results');
     xml.ele('reporter-output');
 
-    // TODO(vojta): remove once we don't care about Karma 0.10
     browsers.forEach(initliazeXmlForBrowser);
   };
 
@@ -128,20 +127,13 @@ var TestNgReporter = function(baseReporterDecorator, config, logger, helper, for
         });
       }
     }
-
-    else{
-
-      if(typeof groups[browser.id].untagged === 'undefined'){
-        groups[browser.id].untagged = group[browser.id].ele('group',{
-          name:'Untagged'
-        })
-      }
-      groups[browser.id].untagged.ele('method',{
-        'class':className,
-        name:result.description,
-        signature:signature
+	
+	if(typeof classNames[browser.id][className] === 'undefined'){
+      classNames[browser.id][className] = tests[browser.id].ele('class',{
+        name:className
       });
     }
+
 
     var spec = classNames[browser.id][className].ele('test-method', {
       name: result.description,

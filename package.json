@@ -1,6 +1,6 @@
 {
   "name": "karma-testng-reporter",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "TestNG reporter for Karma Jasmine tests",
   "main": "index.js",
   "scripts": {
