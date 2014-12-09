@@ -87,9 +87,9 @@ var TestNgReporter = function(baseReporterDecorator, config, logger, helper, for
     helper.mkdirIfNotExists(path.dirname(outputFile), function() {
       fs.writeFile(outputFile, xmlToOutput.end({pretty: true}), function(err) {
         if (err) {
-          log.warn('Cannot write JUnit xml\n\t' + err.message);
+          log.warn('Cannot write TestNG xml\n\t' + err.message);
         } else {
-          log.debug('JUnit results written to "%s".', outputFile);
+          log.debug('TestNG results written to "%s".', outputFile);
         }
 
         if (!--pendingFileWritings) {
@@ -140,14 +140,6 @@ var TestNgReporter = function(baseReporterDecorator, config, logger, helper, for
         'class':className,
         name:result.description,
         signature:signature
-      });
-    }
-
-
-
-    if(typeof classNames[browser.id][className] === 'undefined'){
-      classNames[browser.id][className] = tests[browser.id].ele('class',{
-        name:className
       });
     }
 
