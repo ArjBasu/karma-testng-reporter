@@ -17,9 +17,8 @@
   },
   "author": "Arjun Basu <arjunkbasu@gmail.com>",
   "dependencies": {
-    "xmlbuilder": "0.4.2",
-	"MD5": "^1.2.1"
-	
+    "md5": "^2.1.0",
+    "xmlbuilder": "0.4.2"
   },
   "peerDependencies": {
     "karma": ">=0.9"
