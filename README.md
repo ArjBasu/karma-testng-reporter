@@ -8,7 +8,7 @@ The easiest way is to keep `karma-testng-reporter` as a devDependency in your `p
 ```json
 {
   "devDependencies": {
-    "karma": "~0.10",
+    "karma": "~0.11",
     "karma-testng-reporter": "0.1"
   }
 }
